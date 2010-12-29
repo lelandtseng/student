@@ -1,0 +1,25 @@
+function displayerr(msg){
+  if(typeof msg == 'undefined'){
+  	msg = 'An error msg!' // 如果没有赋予默认错误信息
+  }
+  console.log(msg);
+}
+
+----------------------------------------------------
+
+类型检测
+typeof obj 返回的是javascript内置对象的字符串形式，对于自定义对象不好用。
+
+可以使用constructor来判定类型。
+obj.constructor == User
+
+在JS中作用域是由函数划分的，而不是由块划分，（比如 while，if和for）。
+
+function User(){}
+var me = new User();
+var you = new me.constructor();  //很不错哦！
+
+
+
+
+

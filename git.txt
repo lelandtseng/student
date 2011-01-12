@@ -1,0 +1,35 @@
+ git branch  查看显存的分支
+ 
+ git branch experiment  创建一个分支
+ 
+ git checkout experiment  切换到新分支上
+ 
+ git push origin experiment 上传指定分支
+ 
+ git branch -d experiment 删除这个分支
+ git branch -D experiment 强制删除
+
+git tag 列出标签
+
+git tag -l v1.4.2.* 得到这个标签
+v1.4.2.1
+v1.4.2.2
+v1.4.2.3
+v1.4.2.4
+
+在git中创建带注释的标签非常简单，在运行'tag'命令时加上-a就可以了。
+$ git tag -a v1.4 -m 'version 1.4'
+
+轻量级标签实际上就是存在一个文件中的提交校验和--没有附加任何其他信息。创建轻量级标签的方法就是把上面'-a','-s','-m'这些选项都去掉。
+$ git tag v1.4-lw
+
+默认情况下，'git push'命令不会将标签上传到远程服务器上。为了共享这些标签，你必须在'git push'命令后明确添加-tags选项
+[master]$ git push --tags
+
+
+
+
+
+
+
+
